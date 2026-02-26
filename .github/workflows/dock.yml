@@ -27,11 +27,11 @@ jobs:
       - name: Docker image'ı build et ve push et
         uses: docker/build-push-action@v6
         with:
-          context: .                                   # repo kökünden build et
+          context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:latest    # ghcr.io/k4r3/perl-ttyd-web:latest
-            ghcr.io/${{ github.repository }}:${{ github.sha }}   # her commit'e özel tag
+            ghcr.io/${{ github.repository }}:latest
+            ghcr.io/${{ github.repository }}:${{ github.sha }}
 
       # Opsiyonel: Bunny'ye otomatik deploy et (eğer istersen)
       # - name: Bunny Magic Containers'ı güncelle
